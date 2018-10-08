@@ -1,0 +1,7 @@
+{
+  "name": "Ionic-easy-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

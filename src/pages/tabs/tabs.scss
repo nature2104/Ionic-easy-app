@@ -1,0 +1,78 @@
+page-tabs {
+  .tabs-ios .tabbar {
+
+    .tab-button-icon {
+      min-width: 20px;
+      height: 20px;
+    }
+    .icon-ios {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+    .icon-ios:before {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+    .tab-button-text {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .ion-ios-home:before {
+    content: '';
+    background-image: url("../assets/tabs/home@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .ion-ios-home-outline:before {
+    content: '';
+    background-image: url("../assets/tabs/n_home@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .ion-ios-bell {
+    content: '';
+    background-image: url("../assets/tabs/message@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .ion-ios-bell-outline {
+    content: '';
+    background-image: url("../assets/tabs/n_message@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .ion-ios-tools:before {
+    content: '';
+    background-image: url("../assets/tabs/box@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .ion-ios-tools-outline:before {
+    content: '';
+    background-image: url("../assets/tabs/n_box@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .ion-ios-settings:before {
+    content: '';
+    background-image: url("../assets/tabs/my@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .ion-ios-settings-outline:before {
+    content: '';
+    background-image: url("../assets/tabs/n_my@2x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}

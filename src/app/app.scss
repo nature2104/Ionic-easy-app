@@ -1,0 +1,257 @@
+// http://ionicframework.com/docs/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@mixin setTopLine($c: #CCC) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid $c;
+  color: $c;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+@mixin setBottomLine($c: #CCC) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid $c;
+  color: $c;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+@mixin setLeftLine($c: #CCC) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid $c;
+  color: $c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+
+@mixin setRightLine($c: #CCC) {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid $c;
+  color: $c;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
+
+@mixin setLine($c: #CCC) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  border: 1px solid $c;
+  color: $c;
+  height: 200%;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+
+.ionic-1px, .ionic-1px-t, .ionic-1px-b, .ionic-1px-tb, .ionic-1px-l, .ionic-1px-r {
+  position: relative;
+}
+
+.ionic-1px {
+  &:before {
+    @include setLine();
+  }
+}
+
+.ionic-1px-t {
+  &:before {
+    @include setTopLine();
+  }
+}
+
+.ionic-1px-b {
+  &:after {
+    @include setBottomLine();
+  }
+}
+
+.ionic-1px-tb {
+  &:before {
+    @include setTopLine();
+  }
+  &:after {
+    @include setBottomLine();
+  }
+}
+
+.ionic-1px-l {
+  &:before {
+    @include setLeftLine();
+  }
+}
+
+.ionic-1px-r {
+  &:after {
+    @include setRightLine();
+  }
+}
+
+.item-ios {
+  color: $font-color;
+  padding-left: 8px;
+}
+
+ion-app.ios {
+  font-size: $font-size-middle;
+}
+
+.item-ios[detail-push] .item-inner, button.item-ios:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner {
+  padding-right: 8px;
+  background-position: right 8px center;
+}
+
+.toolbar-ios {
+  .toolbar-background {
+    background-color: #ffffff;
+  }
+  .toolbar-title-ios {
+    font-size: 17px;
+    font-weight: normal;
+  }
+
+  .bar-button-ios {
+    font-size: $font-size-big;
+  }
+  .bar-button-ios[icon-only] ion-icon {
+    font-size: 1.6em;
+  }
+  .back-button-icon-ios {
+    font-size: 3.2rem;
+  }
+}
+
+.bar-custom {
+  .toolbar-background {
+    background-color: $headerColor;
+  }
+  .toolbar-ios .toolbar-title-ios {
+    color: $baseColor
+  }
+  .bar-button-default-ios {
+    color: $baseColor;
+  }
+  .toolbar-background-ios {
+    border-color: transparent;
+  }
+}
+
+.loading-ios .loading-spinner + .loading-content {
+  margin-top: 5px;
+  font-size: $font-size-big;
+  margin-left: 8px;
+}
+
+.toast-ios .toast-wrapper {
+  background-color: rgba(17, 17, 17, 0.7);
+  border-radius: 15px;
+}
+
+.toast-ios .toast-message {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: $font-size-big;
+}
+
+.loading-ios .loading-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  padding: 0px 0px;
+  .custom-spinner-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 45px;
+      height: 45px;
+    }
+    .custom-spinner-img {
+      width: 45px;
+      height: 45px;
+      font-size: 45px;
+    }
+    .error {
+      color: #F76260;
+    }
+    .custom-spinner-text {
+      font-size: $font-size-big;
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
+}
+
+.alert-ios {
+  .alert-wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  .alert-head {
+    padding: 15px 8px 8px;
+  }
+  .alert-sub-title {
+    font-size: $font-size-middle;
+    margin: 10px 0 0;
+    color: #999;
+  }
+  .alert-button {
+    height: 44px;
+    font-size: 16px;
+  }
+  .confirm-cancle {
+    color: #666666;
+  }
+}
+
+.action-sheet-ios .action-sheet-group {
+  border-radius: 8px;
+}
+
+.action-sheet-ios .action-sheet-button {
+  height: 48px;
+  min-height: 48px;
+  font-size: 16px;
+}
