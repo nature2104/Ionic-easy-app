@@ -1,5 +1,5 @@
 {
-  "name": "Ionic easy app",
+  "name": "Ionic-easy-app",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -66,5 +66,5 @@
       }
     }
   },
-  "description": "An Ionic project"
+  "description": "An-Ionic-project"
 }
